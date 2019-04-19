@@ -6,10 +6,6 @@ public class Maze {
 	List<List<String>>	maze;
 	List<List<String>>	parameters;
 
-	public Maze(List<List<String>> maze, List<List<String>> parameters) {
-		this.maze = maze;
-		this.parameters = parameters;
-	}
 	
 	public Maze() {
 	}
