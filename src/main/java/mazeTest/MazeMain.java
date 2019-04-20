@@ -8,7 +8,6 @@ import javax.swing.JOptionPane;
 
 public class MazeMain {
 	public static void main(String[] args) {
-		MazeFormatter formatter = new MazeFormatter();
 		
 		// provide a runtime path to the file
 //		JFileChooser chooser = new JFileChooser();
@@ -16,8 +15,10 @@ public class MazeMain {
 //		File file = chooser.getSelectedFile();
 //		Path path = file.toPath();
 
-		Path path = Paths.get("src/main/resources/samples/sparse_large.txt");
+		MazeFormatter formatter = new MazeFormatter();
+		Path path = Paths.get("src/main/resources/samples/small_wrap_input.txt");
 		Maze maze = formatter.formatMaze(path);
-		System.out.println(maze);
+		MazeRunner runner = new MazeRunner(maze);
+		runner.solveMaze();
 	}
 }

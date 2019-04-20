@@ -40,10 +40,10 @@ public class MazeFormatter {
 		}
 		
 
-
-		int[] dimensions = param_temp.get(0);
-		int[] start = param_temp.get(1);
-		int[] end = param_temp.get(2);
+		// arrange vectors to (row, column) format
+		int[] dimensions = new int[] {param_temp.get(0)[1],param_temp.get(0)[0]};
+		int[] start = new int[] {param_temp.get(1)[1], param_temp.get(1)[0]};
+		int[] end = new int[] {param_temp.get(2)[1], param_temp.get(2)[0]};
 		
 		String[][] maze_def = new String[dimensions[0]][dimensions[1]];
 		for(int i = 0;i<dimensions[0];i++) {
