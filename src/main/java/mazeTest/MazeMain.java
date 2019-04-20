@@ -17,10 +17,7 @@ public class MazeMain {
 //		Path path = file.toPath();
 
 		Path path = Paths.get("src/main/resources/samples/sparse_large.txt");
-		Maze maze = new Maze();
-		formatter.formatMaze(path, maze);
-		System.out.println(maze.getParameters());
-//		System.out.println(maze.getMaze());
-//		System.out.println(maze.getMaze().get(1).get(1));
+		Maze maze = formatter.formatMaze(path);
+		System.out.println(maze);
 	}
 }
